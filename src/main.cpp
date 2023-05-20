@@ -52,11 +52,11 @@ std::string promptCompose ();
 std::string findTaskwarrior ();
 
 ////////////////////////////////////////////////////////////////////////////////
-static void welcome ()
-{
-  std::cout << PACKAGE_STRING << "\n";
-  cmdHelp ();
-}
+//static void welcome ()
+//{
+//  std::cout << PACKAGE_STRING << "\n";
+//  cmdHelp ();
+//}
 
 ////////////////////////////////////////////////////////////////////////////////
 const std::string getResponse (const std::string& prompt)
@@ -164,8 +164,8 @@ int main (int argc, const char** argv)
                    output == "yes\n"  ||
                    output == "on\n");
 
-      if (isatty (fileno (stdin)))
-        welcome ();
+//      if (isatty (fileno (stdin)))
+//        welcome ();
 
       while ((status = commandLoop (autoClear)) == 0)
         ;
